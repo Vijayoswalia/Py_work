@@ -6,3 +6,4 @@ Created on Wed Sep 20 12:36:26 2017
 ""
 
 print ("Hello World")
+Print("Success")
