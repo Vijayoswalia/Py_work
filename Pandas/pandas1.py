@@ -65,13 +65,13 @@ indA & indB
 '''indexing'''
 
 data = pd.Series(['a', 'b', 'c'], index=[1, 3, 5])
- data
+data
 
 
 # explicit index when indexing
- data[1]
+data[1]
 # implicit index when slicing
-In[13]: 
+
 
 data.loc[1]
 
@@ -85,8 +85,14 @@ data.iloc[1:3]
 area = pd.Series({'California': 423967, 'Texas': 695662,
  'New York': 141297, 'Florida': 170312,
  'Illinois': 149995})
- pop = pd.Series({'California': 38332521, 'Texas': 26448193,
+pop = pd.Series({'California': 38332521, 'Texas': 26448193,
  'New York': 19651127, 'Florida': 19552860,
  'Illinois': 12882135})
- data = pd.DataFrame({'area':area, 'pop':pop})
- data
+data = pd.DataFrame({'area':area, 'pop':pop})
+data
+
+z = [1,2,3,4,5,6,7,8,9,9,9,7]
+z
+type(z)
+import numpy as np
+zoo = np.array((3, 4),z)
