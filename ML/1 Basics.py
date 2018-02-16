@@ -59,7 +59,7 @@ names
 my_tuple = ("mouse", [8, 4, 6], (1, 2, 3))
 print(my_tuple)
 ##
-"%s lives in %s at latitude %.1f" % ("Andrew", "Sweden", 57.7056)
+"%s lives in %s at latitude %.2f" % ("Andrew", "Sweden", 57.7056)
 
 ##
 city_population = {"New York City":8550405, "Los Angeles":3971883, "Toronto":2731571, 
@@ -84,12 +84,12 @@ nobel_prize_winners = {
 
 ##
 capitals = {"Austria":"Vienna", "Germany":"Berlin", "Netherlands":"Amsterdam"}
-capital = capitals.pop("Austria", "Vienna")
+capital = capitals.pop("Austria" "Vienna")
 print(capital)
 
 ##
 locations = {"Toronto" : "Ontario", "Vancouver":"British Columbia"}
-#locations["Ottawa"]
+locations["Ottawa"]
 if "Ottawa" in locations: 
     print(locations["Ottawa"])
 else:
