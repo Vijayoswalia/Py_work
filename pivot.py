@@ -35,18 +35,20 @@ pd.pivot_table(student1, index=['course','sclass'],values=['total','python'], ag
 pd.pivot_table(student1, index=['course','sclass'],values=['total','python'], aggfunc=[np.sum, np.mean,len])
 
 
+students = pd.read_csv('student3.csv')
+students.head()
+students.columns
+students.dtypes
+students.select_dtype(['object'])
+students['rollnos'].dtype
+students.index = students.rollnos
+students.drop(labels = 'Unnamed: 0', axis=1, inplace=True)
+del students['Unnamed: 0'] 
+students.describe
+students.groupby('course')['sclass'].describe()
+students.groupby('course')['sclass'].describe().unstack()
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+students.groupby('sclass')
+students.groupby('sclass').aggregate(['min', np.median, max])
+students[['sclass','python','sas']].groupby('sclass').aggregate(['min', np.median, max, np.sum, np.std])
+students[['python']]
