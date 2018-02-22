@@ -16,7 +16,7 @@ hadoopL = np.random.randint(71,90,11)
 feesL = np.random.randint(1000000,1500000,11)
 hostelL = ['True','False','True','False','False','True','False','True','False','False','False',]
 student1['total']= student1['python']+student1['sas']+student1['hadoop']
-student1 = pd.DataFrame({'rollnos':rollnoL,'name':nameL, 'gender':genderL,'fee':feesL,'hostel':hostelL, 'python':pythonL,'sas':sasL,'course':courseL,'hadoop':hadoopL})
+student1 = pd.DataFrame({'rollnos':rollnoL,'name':nameL, 'gender':genderL,'fee':feesL,'hostel':hostelL, 'python':pythonL,'sas':sasL,'course':courseL,'hadoop':hadoopL, 'total':total})
 student1
 student1.to_csv("student.csv")
 

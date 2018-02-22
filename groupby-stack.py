@@ -76,10 +76,18 @@ df2.groupby([str,str.lower,newmap]).mean()
 
 df.groupby('key').sum().unstack()
 
+pd.pivot_table(student1, index='course',values=['sas','hadoop'], aggfunc=[np.mean, np.median, min])
 
+%matplotlib.inline
+import matplotlib.pyplot as plt
+import seaborn as sns
+pd.pivot_table(student1, index='gender', columns='sclass', values='sas').plot(kind='bar')
 
-
-
+'''filter'''
+aggregation = {'sas':{'totalsas':'sum'}}
+aggregation = {'sas':{'totalsas':['sum','mean']}}
+aggregation = {'sas':{'totalsas':['sum','averagesas','mean'],'hadoop':{'meanhadoop':'mean', 'stdhadoop':'std'}}}
+student1[student1['sclass']=='C1'].groupby('gender').agg(aggregation)
 
 
 
